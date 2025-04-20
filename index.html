@@ -1,23 +1,97 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой первый сайт</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Главная</title>
+
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Привет, я Жако!</h1>
-        <p>Добро пожаловать на мой первый сайт.</p>
-    </header>
-    <section>
-        <h2>Обо мне</h2>
-        <p>Я начинающий разработчик, и это мой первый сайт. Я учусь создавать сайты и готов развивать свои навыки.</p>
-        <img src="your-photo.jpg" alt="Моё фото">
+   
+
+    <script>
+        function openComments() {
+            window.open("http://localhost/Zhalgas/comment/comments.html", "_blank");
+        }
+    </script>
+
+    <div class="swiper slider">
+        <a href="http://localhost/MARKA1/index.php">
+            <button class="register-button">Регистрация</button>
+        </a>
+        <button onclick="window.location.href='http://localhost/MARKA1/coment/index.php';">
+            Комментарий
+        </button>
+        <a href="http://localhost/MARKA1/chat_messages/chat.php">
+            <button class="chat-button"> Общий чат</button>
+        </a>
+
+    </a>
+    </button>
+        <a href="http://localhost/MARKA1/orders/order_form.php">
+        <button class="chat-button">Оформить заказ</button>
+    </a>
+    <a href="http://localhost/MARKA1/contact/contact.html" class="contact-button">Связаться с нами</a>
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide">
+                <div class="slide__content">
+                    
+                    <h2>MARKA</h2>
+                    <p>ENGINEERING THE FUTURE</p>
+                    <button>Take it from us</button>
+                </div>
+                
+            </div>
+            <div class="swiper-slide slide">
+                <div class="slide__content">
+                    <h2>QUALITATIVE</h2>
+                    <p>ENGINEERING THE FUTURE</p>
+                    <button>Take it from us</button>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="slide__content">
+                    <h2>CARS</h2>
+                    <p>ENGINEERING THE FUTURE</p>
+                    <button>Take it from us</button>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="slide__content">
+                    <h2>ALWAYS</h2>
+                    <p>ENGINEERING THE FUTURE</p>
+                    <button>Take it from us</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-bottom">
+            <div class="slider-pagination">
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="slider-navigation">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    
+
+    <video src="istockphoto-1867964778-640_adpp_is.mp4" class="video-background" muted></video>
+
+    <section class="hero">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="media/background.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
     </section>
-    <footer>
-        <p>&copy; 2025 Жако. Все права защищены.</p>
-    </footer>
+
+   
 </body>
 </html>

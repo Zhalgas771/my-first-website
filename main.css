@@ -1,0 +1,329 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--swiper-theme-color: #964fcc;
+	--swiper-navigation-size: 30px;
+	--swiper-navigation-sides-offset: 40px;
+	--swiper-pagination-bottom: 20px;
+	--swiper-pagination-color: #a2b8ff;
+	--swiper-pagination-bullet-inactive-color: #17679c;
+	--swiper-pagination-bullet-inactive-opacity: 1;
+}
+body {
+	background-color: #2e318b;
+	color: #da3030;
+}
+.slider {
+	height: 100vh;
+	box-shadow: inset 0 50px 50px #000, inset 0 -50px 50px #305266;
+}
+.slider .slide {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slide__content {
+	text-align: center;
+	opacity: 0;
+	transition: opacity .25s ease;
+}
+.swiper-slide-active .slide__content {
+	opacity: 1;
+}
+.slide__content h2 {
+	font-size: calc(var(--index) * 4);
+	text-transform: uppercase;
+	letter-spacing: calc(var(--index) * 1.65);
+	margin-bottom: calc(var(--index) * 2.3);
+	position: relative;
+}
+.slide__content h2::after {
+	content: '';
+	height: 1px;
+	width: 20%;
+	background-color: rgba(143, 81, 81, 0.35);
+	position: absolute;
+	left: 40%;
+	bottom: calc(var(--index) * -1);
+}
+.slide__content p {
+	font-size: calc(var(--index) * .9);
+	text-transform: uppercase;
+	color: rgba(255 255 255 / .8);
+	letter-spacing: calc(var(--index) * .24);
+	margin-bottom: calc(var(--index) * 2.6);
+}
+button {
+	--button-color: rgba(255 255 255 / .9);
+	padding: 9.25px 40px;
+	font-size: 15.75px;
+	border-radius: 10em;
+	background-color: transparent;
+	border: 2px solid var(--button-color);
+	color: var(--button-color);
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	cursor: pointer;
+}
+.slider-navigation > * {
+	border: 1.5px solid var(--swiper-theme-color);
+	border-radius: 10em;
+	width: 55px;
+	height: 55px;
+}
+.video-background {
+	position: fixed;
+	width: 94%;
+	height: 94%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: .7;
+	transition: opacity 2s ease-out;
+}
+.video-background.change {
+	opacity: 1;
+}
+
+/* Interface */
+
+.container {
+	margin: auto;
+	max-width: 840px;
+}
+.container-top {
+	display: flex;
+	justify-content: space-between;
+}
+.top-line {
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+	padding: 1.7rem 0;
+}
+.logo {
+	border: 3px solid #E1E6F7;
+	border-radius: 10em;
+	width: 54px;
+	height: 54px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: .75;
+}
+.logo img{
+	width: 25px;
+	height: auto;
+}
+.main-mnu {
+	display: flex;
+	margin-top: 15px;
+	font-size: 19px;
+	margin-right: -16px;
+}
+.main-mnu li {
+	list-style: none;
+}
+.main-mnu a {
+	color: #bbbec9;
+	padding: 16px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	text-decoration: none;
+	font-weight: 200;
+	outline: none;
+}
+.main-mnu a:hover {
+	text-decoration: underline;
+	
+	.hero {url(../istockphoto-1867964778-640_adpp_is.mp4)
+		position: relative;
+		height: 100vh;
+		overflow: hidden;
+	  }
+	  
+	  .background-video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover; 
+		z-index: -1;
+	  }
+	  
+	  .content {
+		position: relative;
+		z-index: 1; 
+		color: white;
+		text-align: center;
+		top: 50%;
+		transform: translateY(-50%);
+	  }
+	  
+}
+button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 5px;
+}
+```
+button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+}
+p {
+    font-size: 16px;
+}
+a {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.comments {
+    position: relative;
+    z-index: 10;
+    background: transparent; /* Убираем ненужный фон */
+    padding: 20px;
+}
+
+.comments h2 {
+    font-size: 24px;
+    color: white; /* Цвет заголовка */
+    text-align: center;
+}
+
+.comments form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comments input,
+.comments textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comments button {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.comments button:hover {
+    background-color: #e55b00;
+}
+
+
+
+
+.contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.contact-button:hover {
+    background-color: darkred;
+}
+button, .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red; /* Цвет кнопок */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .contact-button:hover {
+    background-color: darkred; /* Цвет при наведении */
+}
+
+a button {
+    all: unset; /* Убираем стандартный стиль кнопок */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a button:hover {
+    background-color: darkred;
+}
+button, .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red; /* Цвет кнопок */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .contact-button:hover {
+    background-color: darkred; /* Цвет при наведении */
+}
+
+a button {
+    all: unset; /* Убираем стандартный стиль кнопок */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a button:hover {
+    background-color: darkred;
+}
